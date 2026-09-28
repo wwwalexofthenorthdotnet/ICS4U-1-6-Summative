@@ -42,81 +42,24 @@ namespace ICS4U_1_6_Summative
                     else
                     {
 
+                        Console.Clear();
+                        Console.WriteLine(@"Which outcome would you like to bet on?
+1. Doubles
+2. Not Doubles
+3. Even SUM
+4. Odd SUM
+5. Sum of 7");
+
+                        Console.ReadKey();
+
                         die1.RollDie();
                         die2.RollDie();
 
                         die1.DrawRoll();
                         die2.DrawRoll();
 
-                        if (die1.Roll == die2.Roll)
-                        {
-                            Console.WriteLine("You rolled a DOUBLE!");
-
-                            bet = bet * 2;
-
-                            Console.WriteLine($"You have gained ${Math.Round(bet, 2)}! That's double your bet!");
-
-                            Console.WriteLine();
-
-                            Console.WriteLine("Press any key to EXIT");
-
-                            Console.ReadKey();
-                        }
-                        else if (die2.Roll - die1.Roll == 0)
-                        {
-                            Console.WriteLine("You rolled an EVEN SUM!");
-
-                            bet = bet + bet * 0.5;
-
-                            Console.WriteLine($"You have gained ${Math.Round(bet, 2)}! That's 1.5x your bet!");
-
-                            Console.WriteLine();
-
-                            Console.WriteLine("Press any key to EXIT");
-
-                            Console.ReadKey();
-                        }
-                        else if (die2.Roll - die1.Roll == 1)
-                        {
-                            Console.WriteLine("You rolled an ODD SUM!");
-
-                            bet = bet * 0.5;
-
-                            Console.WriteLine($"You have gained ${Math.Round(bet, 2)}! That's HALF your bet!");
-
-                            Console.WriteLine();
-
-                            Console.WriteLine("Press any key to EXIT");
-
-                            Console.ReadKey();
-                        }
-                        else if (die1.Roll == 1 && die2.Roll == 1)
-                        {
-                            Console.WriteLine("You rolled SNAKE EYES!");
-
-                            bet = bet * 0;
-
-                            Console.WriteLine($"You have gained ${Math.Round(bet, 2)}! That's NONE of your bet!");
-
-                            Console.WriteLine();
-
-                            Console.WriteLine("Press any key to EXIT");
-
-                            Console.ReadKey();
-                        }
-
-                        bal = bal + bet;
-
-
                     }
                 }
-                else
-                {
-                    Console.WriteLine("Error - Valid numerical input required");
-                    Console.ReadKey();
-                }
-
-                Console.Clear();
 
                 
             }
