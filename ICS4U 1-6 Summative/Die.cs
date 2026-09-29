@@ -59,7 +59,35 @@ namespace ICS4U_Topic_5._5
             ConsoleColor currentForecolor = Console.ForegroundColor;
 
 
+
+            if (_roll == 1)
+            {
+                Colour = ConsoleColor.DarkMagenta;
+            }
+            else if (_roll == 2)
+            {
+                Colour = ConsoleColor.Blue;
+            }
+            else if (_roll == 3)
+            {
+                Colour = ConsoleColor.Magenta;
+            }
+            else if (_roll == 4)
+            {
+                Colour = ConsoleColor.Cyan;
+            }
+            else if (_roll == 5)
+            {
+                Colour = ConsoleColor.Yellow;
+            }
+            else if (_roll == 6)
+            {
+                Colour = ConsoleColor.White;
+            }
+
             Console.ForegroundColor = _colour;
+
+
 
             Console.WriteLine("-----");
             if (Roll == 1)

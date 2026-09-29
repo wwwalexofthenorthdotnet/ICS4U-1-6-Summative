@@ -26,6 +26,7 @@ namespace ICS4U_1_6_Summative
             while (!finish)
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 bet = 0;
 
                 
@@ -40,6 +41,14 @@ namespace ICS4U_1_6_Summative
                 {
                     if (bet == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+
+                        Console.Clear();
+                        Console.WriteLine("Thank you for playing!");
+                        Console.WriteLine("       .---.\r\n  ___ /_____\\\r\n /\\.-`( '.' )\r\n/ /    \\_-_/_\r\n\\ `-.-\"`'V'//-.\r\n `.__,   |// , \\\r\n     |Ll //Ll|\\ \\\r\n     |__//   | \\_\\\r\n    /---|[]==| / /\r\n    \\__/ |   \\/\\/\r\n    /_   | Ll_\\|\r\n     |`^\"\"\"^`|\r\n     |   |   |\r\n     |   |   |\r\n     |   |   |\r\n     |   |   |\r\n     L___l___J\r\n jgs  |_ | _|\r\n     (___|___)\r\n      ^^^ ^^^\r\n");
+                        Console.WriteLine();
+                        Console.WriteLine("Press any key to EXIT");
+                        Console.ReadKey();
                         finish = true;
                     }
                     else if (bal < bet || bet < 0)
@@ -58,6 +67,8 @@ namespace ICS4U_1_6_Summative
                         Console.Write("Choice : ");
                         betChoice = Console.ReadLine();
 
+                        Console.Clear();
+
                         if (betChoice.Trim() == "1" || betChoice.Trim() == "2" || betChoice.Trim() == "3" || betChoice.Trim() == "4" || betChoice.Trim() == "5" || betChoice.ToLower().Trim() == "doubles" || betChoice.ToLower().Trim() == "not doubles" || betChoice.ToLower().Trim() == "even sum" || betChoice.ToLower().Trim() == "odd sum" || betChoice.ToLower().Trim() == "sum of 7")
                         {
                             die1.RollDie();
@@ -70,6 +81,8 @@ namespace ICS4U_1_6_Summative
                             {
                                 if (die1.Roll == die2.Roll)
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Green;
+
                                     bet = bet + bet * 2;
 
                                     Console.WriteLine("You rolled a DOUBLE!");
@@ -82,6 +95,9 @@ namespace ICS4U_1_6_Summative
                                 }
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+
+
                                     Console.WriteLine("You DID NOT roll a DOUBLE!");
                                     Console.WriteLine($"You lost ${bet}!");
                                     Console.WriteLine();
@@ -96,7 +112,10 @@ namespace ICS4U_1_6_Summative
                             {
                                 if (die1.Roll != die2.Roll)
                                 {
-                                    bet = bet * 1.5;
+                                    bet = bet * 0.5;
+
+                                    Console.ForegroundColor = ConsoleColor.Green;
+
 
                                     Console.WriteLine("You DID NOT roll a double!");
                                     Console.WriteLine($"You gained ${bet}!");
@@ -108,6 +127,9 @@ namespace ICS4U_1_6_Summative
                                 }
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+
+
                                     Console.WriteLine("You rolled a double? UNLUCKY!");
                                     Console.WriteLine($"You lost ${bet}!");
                                     Console.WriteLine();
@@ -124,6 +146,9 @@ namespace ICS4U_1_6_Summative
                                 {
                                     bet = bet * 2;
 
+                                    Console.ForegroundColor = ConsoleColor.Green;
+
+
                                     Console.WriteLine("You rolled an even sum!");
                                     Console.WriteLine($"You gained ${bet}!");
                                     Console.WriteLine();
@@ -134,6 +159,9 @@ namespace ICS4U_1_6_Summative
                                 }
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+
+
                                     Console.WriteLine("You rolled an odd sum! UNLUCKY!");
                                     Console.WriteLine($"You lost ${bet}!");
                                     Console.WriteLine();
@@ -150,6 +178,9 @@ namespace ICS4U_1_6_Summative
                                 {
                                     bet = bet * 2;
 
+                                    Console.ForegroundColor = ConsoleColor.Green;
+
+
                                     Console.WriteLine("You rolled an odd sum!");
                                     Console.WriteLine($"You gained ${bet}!");
                                     Console.WriteLine();
@@ -160,6 +191,9 @@ namespace ICS4U_1_6_Summative
                                 }
                                 else
                                 {
+
+                                    Console.ForegroundColor = ConsoleColor.Red;
+
                                     Console.WriteLine("You rolled an even sum! UNLUCKY!");
                                     Console.WriteLine($"You lost ${bet}!");
                                     Console.WriteLine();
@@ -176,6 +210,9 @@ namespace ICS4U_1_6_Summative
                                 {
                                     bet = bet * 7;
 
+                                    Console.ForegroundColor = ConsoleColor.Green;
+
+
                                     Console.WriteLine("You rolled a sum of 7!");
                                     Console.WriteLine($"You gained ${bet}!");
                                     Console.WriteLine();
@@ -186,6 +223,9 @@ namespace ICS4U_1_6_Summative
                                 }
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+
+
                                     Console.WriteLine("You DID NOT roll a sum of 7! UNLUCKY!");
                                     Console.WriteLine($"You lost ${bet}!");
                                     Console.WriteLine();
@@ -202,8 +242,11 @@ namespace ICS4U_1_6_Summative
 
                             if (bal <= 0)
                             {
+                                Console.ForegroundColor = ConsoleColor.Red;
+
                                 Console.Clear();
-                                Console.WriteLine("Thank you for playing!");
+                                Console.WriteLine("Thank you for playing! Come back with more MONEY!");
+                                Console.WriteLine("       .---.\r\n  ___ /_____\\\r\n /\\.-`( '.' )\r\n/ /    \\_-_/_\r\n\\ `-.-\"`'V'//-.\r\n `.__,   |// , \\\r\n     |Ll //Ll|\\ \\\r\n     |__//   | \\_\\\r\n    /---|[]==| / /\r\n    \\__/ |   \\/\\/\r\n    /_   | Ll_\\|\r\n     |`^\"\"\"^`|\r\n     |   |   |\r\n     |   |   |\r\n     |   |   |\r\n     |   |   |\r\n     L___l___J\r\n jgs  |_ | _|\r\n     (___|___)\r\n      ^^^ ^^^\r\n");
                                 Console.WriteLine();
                                 Console.WriteLine("Press any key to EXIT");
                                 Console.ReadKey();
@@ -231,9 +274,9 @@ namespace ICS4U_1_6_Summative
 
                     }
                 }
-                
 
-                
+
+
             }
 
 
