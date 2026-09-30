@@ -83,6 +83,7 @@ namespace ICS4U_1_6_Summative
                                 {
                                     Console.ForegroundColor = ConsoleColor.Green;
 
+
                                     bet = bet + bet * 2;
 
                                     Console.WriteLine("You rolled a DOUBLE!");
@@ -92,6 +93,8 @@ namespace ICS4U_1_6_Summative
                                     Console.ReadKey();
 
                                     bal = bal + bet;
+
+
                                 }
                                 else
                                 {
@@ -112,9 +115,9 @@ namespace ICS4U_1_6_Summative
                             {
                                 if (die1.Roll != die2.Roll)
                                 {
+
                                     bet = bet * 0.5;
 
-                                    Console.ForegroundColor = ConsoleColor.Green;
 
 
                                     Console.WriteLine("You DID NOT roll a double!");
@@ -144,6 +147,7 @@ namespace ICS4U_1_6_Summative
                             {
                                 if (die2.Roll - die1.Roll == 0)
                                 {
+
                                     bet = bet * 2;
 
                                     Console.ForegroundColor = ConsoleColor.Green;
@@ -156,6 +160,8 @@ namespace ICS4U_1_6_Summative
                                     Console.ReadKey();
 
                                     bal = bal + bet;
+
+
                                 }
                                 else
                                 {
@@ -188,6 +194,9 @@ namespace ICS4U_1_6_Summative
                                     Console.ReadKey();
 
                                     bal = bal + bet;
+
+
+
                                 }
                                 else
                                 {
@@ -208,6 +217,7 @@ namespace ICS4U_1_6_Summative
                             {
                                 if (die2.Roll + die1.Roll == 7)
                                 {
+
                                     bet = bet * 7;
 
                                     Console.ForegroundColor = ConsoleColor.Green;
@@ -220,6 +230,7 @@ namespace ICS4U_1_6_Summative
                                     Console.ReadKey();
 
                                     bal = bal + bet;
+
                                 }
                                 else
                                 {
@@ -284,5 +295,8 @@ namespace ICS4U_1_6_Summative
 
 
         }
+
+        
+
     }
 }
