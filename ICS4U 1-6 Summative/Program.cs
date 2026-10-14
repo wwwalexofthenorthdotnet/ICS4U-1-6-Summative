@@ -145,7 +145,7 @@ namespace ICS4U_1_6_Summative
                             }
                             else if (betChoice.ToLower().Trim() == "3" || betChoice.ToLower().Trim() == "even sum")
                             {
-                                if (die2.Roll - die1.Roll == 0)
+                                if ((die1.Roll + die2.Roll) % 2 == 0)
                                 {
 
                                     bet = bet * 2;
@@ -180,7 +180,7 @@ namespace ICS4U_1_6_Summative
                             }
                             else if (betChoice.ToLower().Trim() == "4" || betChoice.ToLower().Trim() == "odd sum")
                             {
-                                if (die2.Roll - die1.Roll != 0)
+                                if ((die1.Roll + die2.Roll) % 2 != 0)
                                 {
                                     bet = bet * 2;
 
